@@ -26,83 +26,83 @@ interface DropResult {
 const eyeShapes: EyeShape[] = [
   {
     id: "droopy-eyes",
-    title: "Droopy Eyes",
-    description: "Upper eyelid that droops towards the outer corner",
+    title: "العيون المتدلية",
+    description: "الجفن العلوي الذي يتدلى نحو الزاوية الخارجية",
     image: "/images/yeux-tombants.png",
     correctMapping: "oeil-de-biche",
-    explanation: "Correct! The doe eye with increasing lengths towards the outer corner corrects the drooping effect.",
+    explanation: "صحيح! عين الغزال بأطوال متزايدة نحو الخارج تصحح تأثير التدلي.",
   },
   {
     id: "round-eyes",
-    title: "Round Eyes",
-    description: "Naturally rounded eye shape",
+    title: "العيون المستديرة",
+    description: "شكل العين الطبيعي المستدير",
     image: "/images/yeux-ronds.png",
     correctMapping: "naturel",
-    explanation: "Exactly! The natural mapping enhances the beautiful round shape without altering it.",
+    explanation: "ممتاز! المابنغ الطبيعي يعزز الشكل الدائري الجميل دون تغييره.",
   },
   {
     id: "deep-set-eyes",
-    title: "Deep-Set Eyes",
-    description: "Eyes that appear set back in the socket",
+    title: "العيون الغائرة",
+    description: "العيون التي تبدو غائرة في محجر العين",
     image: "/images/yeux-enfonces.png",
     correctMapping: "oeil-ouvert",
-    explanation: "Perfect! The open eye with its emphasis at the center makes deep-set eyes stand out.",
+    explanation: "مثالي! العين المفتوحة مع تركيزها في الوسط تجعل العيون الغائرة بارزة.",
   },
   {
     id: "wide-set-eyes",
-    title: "Wide-Set Eyes",
-    description: "Large distance between the two eyes",
+    title: "العيون الواسعة المسافة",
+    description: "مسافة كبيرة بين العينين",
     image: "/images/yeux-ecartes.png",
     correctMapping: "oeil-de-poupee",
-    explanation: "Correct! The doll eye concentrates attention at the center and visually brings the eyes closer together.",
+    explanation: "صحيح! عين الدمية تركز الانتباه في الوسط وتجلب العينين بشكل بصري أقرب.",
   },
   {
     id: "close-set-eyes",
-    title: "Close-Set Eyes",
-    description: "Small distance between the two eyes",
+    title: "العيون القريبة المسافة",
+    description: "مسافة صغيرة بين العينين",
     image: "/images/yeux-rapproches.png",
     correctMapping: "oeil-de-biche",
-    explanation: "Exactly! The doe eye stretches the gaze towards the outside and visually separates the eyes.",
+    explanation: "ممتاز! عين الغزال تمد النظر نحو الخارج وتفصل العينين بشكل بصري.",
   },
   {
     id: "small-eyes",
-    title: "Small Eyes",
-    description: "Small-sized eyes that lack intensity",
+    title: "العيون الصغيرة",
+    description: "عيون صغيرة الحجم تفتقر إلى الكثافة",
     image: "/images/yeux-petits.png",
     correctMapping: "oeil-de-chaton",
-    explanation: "Perfect! The kitten eye gives a subtle lift that delicately enlarges small eyes.",
+    explanation: "مثالي! عين الهرة تعطي رفعاً خفياً يكبر العيون الصغيرة بشكل أنيق.",
   },
 ]
 
 const mappingStyles = [
   {
     id: "oeil-de-poupee",
-    title: "Doll Eye",
-    description: "Long lashes in the center, innocent gaze effect",
+    title: "عين الدمية",
+    description: "رموش طويلة في الوسط، تأثير نظرة بريئة",
     image: "/images/oeil-de-poupee.png",
   },
   {
     id: "naturel",
-    title: "Natural",
-    description: "Uniform distribution, enhances natural shape",
+    title: "طبيعي",
+    description: "توزيع موحد، يعزز الشكل الطبيعي",
     image: "/images/naturel.png",
   },
   {
     id: "oeil-de-biche",
-    title: "Doe Eye",
-    description: "Increasing lengths towards outer corner, elongated effect",
+    title: "عين الغزال",
+    description: "أطوال متزايدة نحو الزاوية الخارجية، تأثير مطول",
     image: "/images/oeil-de-biche.png",
   },
   {
     id: "oeil-ouvert",
-    title: "Open Eye",
-    description: "Emphasis at center, enlarges small eyes",
+    title: "عين مفتوحة",
+    description: "تركيز في الوسط، يكبر العيون الصغيرة",
     image: "/images/oeil-ouvert.png",
   },
   {
     id: "oeil-de-chaton",
-    title: "Kitten Eye",
-    description: "Soft version of doe eye, subtle lift",
+    title: "عين الهرة",
+    description: "نسخة ناعمة من عين الغزال، رفع خفي",
     image: "/images/oeil-de-chaton.png",
   },
 ]
@@ -142,7 +142,7 @@ export default function EyelashMappingGame() {
       correct: isCorrect,
       explanation: isCorrect
         ? eyeShape.explanation
-        : `Error! ${eyeShape.title} requires ${mappingStyles.find((m) => m.id === eyeShape.correctMapping)?.title}.`,
+        : `خطأ! ${eyeShape.title} يتطلب ${mappingStyles.find((m) => m.id === eyeShape.correctMapping)?.title}.`,
     })
 
     setDraggedItem(null)
@@ -171,9 +171,9 @@ export default function EyelashMappingGame() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-2">
-            Eyelash Mapping - Choose the Right Technique
+            مابنغ الرموش - اختر التقنية الصحيحة
           </h1>
-          <p className="text-purple-700 mb-4">Drag and drop the appropriate technique according to the eye morphology</p>
+          <p className="text-purple-700 mb-4">اسحب وأفلت التقنية المناسبة حسب شكل العين</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <Badge className="text-lg px-4 py-2 bg-purple-200 text-purple-800 hover:bg-purple-200">
@@ -187,47 +187,47 @@ export default function EyelashMappingGame() {
                 </DialogTrigger>
                 <DialogContent className="w-96 h-96 p-6 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-xl">
                   <DialogHeader className="flex-shrink-0 mb-4">
-                    <DialogTitle className="text-purple-900 text-lg text-center">Eyelash Mapping Guide</DialogTitle>
+                    <DialogTitle className="text-purple-900 text-lg text-center">دليل مابنغ الرموش</DialogTitle>
                   </DialogHeader>
                   <div className="flex-1 overflow-y-auto space-y-3 text-xs">
                     <div className="bg-purple-50 p-3 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Doll Eye</h3>
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">عين الدمية</h3>
                       <div className="space-y-1 text-purple-800">
-                        <p className="font-medium text-xs">Long center, short corners = enlarges small eyes</p>
-                        <p className="text-xs text-purple-600">Rule: 12mm center, 9mm corners</p>
+                        <p className="font-medium text-xs">وسط طويل، زوايا قصيرة = يكبر العيون الصغيرة</p>
+                        <p className="text-xs text-purple-600">القاعدة: 12ملم الوسط، 9ملم الزوايا</p>
                       </div>
                     </div>
                     <div className="bg-pink-50 p-3 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Natural</h3>
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">طبيعي</h3>
                       <div className="space-y-1 text-purple-800">
-                        <p className="font-medium text-xs">Uniform lengths = follows natural shape</p>
-                        <p className="text-xs text-purple-600">Rule: same curl everywhere</p>
+                        <p className="font-medium text-xs">أطوال موحدة = تتبع الشكل الطبيعي</p>
+                        <p className="text-xs text-purple-600">القاعدة: نفس الانحناء في كل مكان</p>
                       </div>
                     </div>
                     <div className="bg-purple-50 p-3 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Doe Eye</h3>
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">عين الغزال</h3>
                       <div className="space-y-1 text-purple-800">
-                        <p className="font-medium text-xs">Short → long towards outside = corrects droopy eyes</p>
-                        <p className="text-xs text-purple-600">Rule: 9mm inner, 14mm outer</p>
+                        <p className="font-medium text-xs">قصير → طويل نحو الخارج = يصحح العيون المتدلية</p>
+                        <p className="text-xs text-purple-600">القاعدة: 9ملم الداخلي، 14ملم الخارجي</p>
                       </div>
                     </div>
                     <div className="bg-pink-50 p-3 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Open Eye</h3>
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">عين مفتوحة</h3>
                       <div className="space-y-1 text-purple-800">
-                        <p className="font-medium text-xs">Peak at center = opens deep-set eyes</p>
-                        <p className="text-xs text-purple-600">Rule: 12mm middle, 10mm corners</p>
+                        <p className="font-medium text-xs">قمة في الوسط = تفتح العيون الغائرة</p>
+                        <p className="text-xs text-purple-600">القاعدة: 12ملم الوسط، 10ملم الزوايا</p>
                       </div>
                     </div>
                     <div className="bg-purple-50 p-3 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Kitten Eye</h3>
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">عين الهرة</h3>
                       <div className="space-y-1 text-purple-800">
-                        <p className="font-medium text-xs">Soft doe version = subtle lift</p>
-                        <p className="text-xs text-purple-600">Rule: less pronounced progression</p>
+                        <p className="font-medium text-xs">نسخة ناعمة من الغزال = رفع خفي</p>
+                        <p className="text-xs text-purple-600">القاعدة: تدرج أقل وضوحاً</p>
                       </div>
                     </div>
                     <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 rounded-lg">
                       <p className="text-xs font-medium text-purple-900">
-                        <strong>Memo:</strong> Center = enlarge / Outside = elongate / Uniform = natural
+                        <strong>مذكرة:</strong> الوسط = تكبير / الخارج = إطالة / الموحد = طبيعي
                       </p>
                     </div>
                   </div>
@@ -239,7 +239,7 @@ export default function EyelashMappingGame() {
                 variant="outline"
                 className="border-pink-300 text-pink-600 hover:bg-pink-50 bg-transparent"
               >
-                Restart
+                إعادة البدء
               </Button>
             </div>
           </div>
@@ -262,10 +262,10 @@ export default function EyelashMappingGame() {
         {isGameComplete && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
             <div className="bg-white rounded-lg p-6 max-w-md mx-auto text-center">
-              <h2 className="text-2xl font-bold text-purple-900 mb-4">🎉 Congratulations!</h2>
-              <p className="text-purple-700 mb-4">You completed the game with a perfect score of 6/6!</p>
+              <h2 className="text-2xl font-bold text-purple-900 mb-4">🎉 تهانينا!</h2>
+              <p className="text-purple-700 mb-4">لقد أكملت اللعبة بنتيجة مثالية 6/6!</p>
               <Button onClick={resetGame} className="bg-purple-600 hover:bg-purple-700">
-                Play Again
+                العب مرة أخرى
               </Button>
             </div>
           </div>
@@ -296,9 +296,9 @@ export default function EyelashMappingGame() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Eye Shapes */}
           <div className="lg:col-span-2">
-            <h2 className="text-xl font-semibold text-purple-900 mb-4">Eye Morphologies</h2>
+            <h2 className="text-xl font-semibold text-purple-900 mb-4">أشكال العيون</h2>
             <p className="text-purple-600 mb-6 text-sm">
-              Drag each eye morphology towards the mapping technique you think is most appropriate
+              اسحب كل شكل عين نحو تقنية المابنغ التي تعتبرها الأنسب
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {eyeShapes.map((shape) => (
@@ -327,7 +327,7 @@ export default function EyelashMappingGame() {
                         <h3 className="font-medium text-purple-900 mb-1">{shape.title}</h3>
                         <p className="text-sm text-purple-600">{shape.description}</p>
                         {completedShapes.has(shape.id) && (
-                          <Badge className="mt-2 bg-green-100 text-green-800">✓ Completed</Badge>
+                          <Badge className="mt-2 bg-green-100 text-green-800">✓ مكتمل</Badge>
                         )}
                       </div>
                     </div>
@@ -339,8 +339,8 @@ export default function EyelashMappingGame() {
 
           {/* Drop Zones */}
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-purple-900">Mapping Styles</h2>
-            <p className="text-purple-600 mb-4 text-sm">Click on images to enlarge and see details</p>
+            <h2 className="text-xl font-semibold text-purple-900">أنماط المابنغ</h2>
+            <p className="text-purple-600 mb-4 text-sm">انقر على الصور لتكبيرها ورؤية التفاصيل</p>
 
             {mappingStyles.map((style) => (
               <div

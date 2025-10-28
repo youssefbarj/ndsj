@@ -26,51 +26,51 @@ interface DropResult {
 const clientScenarios: ClientScenario[] = [
   {
     id: "oily-skin",
-    title: "Oily Skin",
-    description: "Client with oily and shiny skin",
+    title: "البشرة الدهنية",
+    description: "عميل بشرة دهنية ولامعة",
     image: "/images/oily-skin.png",
     correctTechnique: "microshading",
-    explanation: "Correct! Microshading holds better on oily skin because microblading strokes can bleed.",
+    explanation: "صحيح! المايكروشيدنغ يثبت أفضل على البشرة الدهنية لأن ضربات المايكروبليدنغ يمكن أن تنزف.",
   },
   {
     id: "dry-skin",
-    title: "Dry Skin",
-    description: "Client with dry skin and visible texture",
+    title: "البشرة الجافة",
+    description: "عميل بشرة جافة وملمس مرئي",
     image: "/images/dry-skin-texture.png",
     correctTechnique: "microblading",
-    explanation: "Exactly! Microblading works well on dry skin and creates clean, precise strokes.",
+    explanation: "ممتاز! المايكروبليدنغ يعمل بشكل جيد على البشرة الجافة ويخلق ضربات نظيفة ودقيقة.",
   },
   {
     id: "sparse-eyebrows",
-    title: "Very Sparse Eyebrows",
-    description: "Client with very thin and sparse eyebrows",
+    title: "حواجب شبه فارغة",
+    description: "عميل بحواجب رقيقة جداً ومتفرقة",
     image: "/images/sparse-eyebrows.png",
     correctTechnique: "microshading",
-    explanation: "Perfect! Microshading gives more density and better covers sparse areas.",
+    explanation: "مثالي! المايكروشيدنغ يعطي كثافة أكثر ويغطي المناطق المتفرقة بشكل أفضل.",
   },
   {
     id: "natural-look",
-    title: "Wants Natural Look",
-    description: "Client who wants a very natural result",
+    title: "يرغب في مظهر طبيعي",
+    description: "عميل يريد نتيجة طبيعية جداً",
     image: "/images/natural-full-eyebrows.png",
     correctTechnique: "microblading",
-    explanation: "Correct! Microblading perfectly mimics natural hairs for a very realistic effect.",
+    explanation: "صحيح! المايكروبليدنغ يحاكي الشعر الطبيعي بشكل مثالي لتأثير واقعي جداً.",
   },
   {
     id: "makeup-look",
-    title: "Wants Makeup Look",
-    description: "Client who prefers a makeup effect",
+    title: "يرغب في مظهر مكياج",
+    description: "عميل يفضل تأثير المكياج",
     image: "/images/over-plucked-eyebrows.png",
     correctTechnique: "microshading",
-    explanation: "Exactly! Microshading gives a powdered effect like permanent makeup.",
+    explanation: "ممتاز! المايكروشيدنغ يعطي تأثيراً مسحوقاً مثل المكياج الدائم.",
   },
   {
     id: "sensitive-skin",
-    title: "Sensitive Skin",
-    description: "Client with sensitive and reactive skin",
+    title: "البشرة الحساسة",
+    description: "عميل بشرة حساسة ومتفاعلة",
     image: "/images/dry-skin-texture.png",
     correctTechnique: "microshading",
-    explanation: "Perfect! Microshading is less traumatic because it requires fewer passes.",
+    explanation: "مثالي! المايكروشيدنغ أقل صدمة لأنه يتطلب مروراً أقل.",
   },
 ]
 
@@ -108,7 +108,7 @@ export default function TechniqueSelectionGame() {
       correct: isCorrect,
       explanation: isCorrect
         ? scenario.explanation
-        : `Error! ${scenario.title} requires ${scenario.correctTechnique === "microblading" ? "microblading" : "microshading"}.`,
+        : `خطأ! ${scenario.title} يتطلب ${scenario.correctTechnique === "microblading" ? "المايكروبليدنغ" : "المايكروشيدنغ"}.`,
     })
 
     setDraggedItem(null)
@@ -132,9 +132,9 @@ export default function TechniqueSelectionGame() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-2">
-            Choose the Right Technique - Mini Game
+            اختر التقنية الصحيحة - لعبة مصغرة
           </h1>
-          <p className="text-purple-700 mb-4">Drag and drop the appropriate technique according to the client type</p>
+          <p className="text-purple-700 mb-4">اسحب وأفلت التقنية المناسبة حسب نوع العميل</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <Badge className="text-lg px-4 py-2 bg-purple-200 text-purple-800 hover:bg-purple-200">
