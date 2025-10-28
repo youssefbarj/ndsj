@@ -5,8 +5,8 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'لعبة مابنغ الرموش',
-  description: 'لعبة تفاعلية لمابنغ الرموش لتعلم التقنية الصحيحة لكل شكل عين',
+  title: 'لعبة تصميم الرموش الاحترافية',
+  description: 'لعبة تفاعلية لتعليم تقنيات تصميم الرموش المناسبة لكل نوع من أنواع العيون',
   generator: 'v0.app',
 }
 
